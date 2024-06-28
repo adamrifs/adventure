@@ -1,0 +1,7 @@
+export const thirdpara = [
+    {
+        description1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora exercitationem aspernatur cum provident necessitatibus itaque doloremque consequatur saepe modi nulla, odit numquam dignissimos esse reprehenderit! Dolores placeat optio blanditiis exercitationem.',
+        description2:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora exercitationem aspernatur cum provident necessitatibus itaque doloremque consequatur saepe modi nulla, odit numquam dignissimos esse reprehenderit! Dolores placeat optio blanditiis exercitationem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora exercitationem aspernatur cum provident necessitatibus itaque doloremque consequatur saepe modi nulla, odit numquam dignissimos esse reprehenderit! Dolores placeat optio blanditiis exercitationem.',
+        description3:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora exercitationem aspernatur cum provident necessitatibus itaque doloremque consequatur saepe modi nulla, odit numquam dignissimos esse reprehenderit! Dolores placeat optio blanditiis exercitationem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora exercitationem aspernatur cum provident necessitatibus itaque doloremque consequatur saepe modi nulla, odit numquam dignissimos esse reprehenderit! Dolores placeat optio blanditiis exercitationem.'
+    }
+]

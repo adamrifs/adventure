@@ -1,0 +1,480 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+.homeContainer {
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(29, 29, 29, 0.199), rgba(29, 29, 29, 0.199)), url('./assets/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+
+}
+
+.mount-name {
+    position: fixed;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.mount-name h1 {
+    font-size: 180px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+    text-shadow: 4px 5px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 1s ease;
+}
+
+.slide {
+    transform: translateY(20%);
+}
+
+.mountain {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.mountain img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.9);
+}
+
+/* ================= aside starts here ============= */
+.aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 50px;
+    color: white;
+    z-index: 6000;
+}
+
+.aside .sc-icons>svg {
+    font-size: 22px;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+
+/* ============== bottom tool ============== */
+.bt-tool {
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    z-index: 600;
+    color: rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.bt-tool>svg {
+    font-size: 22px;
+}
+
+.bt-tool p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+@media (max-width:700px) {
+
+    .mount-name h1 {
+        font-size: 120px;
+    }
+
+    .aside{
+        display: none;
+    }
+}
+
+/*%%%%%%% ===== second section starts here ======= %%%%% */
+.second-cont {
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000207;
+    border-top: 0px solid #000207;
+    box-shadow: 0px 20px 80px 50px #000207,
+        0px -20px 80px 50px #000207;
+    z-index: 100;
+}
+
+.card-cont {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.box {
+    width: 250px;
+    height: 350px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(to bottom, transparent 70%, rgb(0, 0, 0) 100%);
+}
+
+.box:nth-child(even) {
+    transform: translateY(-10%);
+}
+
+.box:hover img {
+    transform: scale(1.1);
+}
+
+.box:hover h2 {
+    font-size: 28px;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+    transition: 0.5s ease-in-out;
+
+}
+
+.box .heads {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.heads h2 {
+    color: rgb(237, 237, 237);
+    font-size: 30px;
+    font-family: "Poppins";
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.5s ease-in-out;
+    text-shadow: 2px 3px 6px black;
+}
+
+.box .crd-title {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 100;
+}
+
+.crd-title a {
+    text-decoration: none;
+    color: rgb(225, 225, 225);
+    font-family: "Poppins";
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.4s ease;
+}
+
+.crd-title a:hover {
+    /* font-size: 14px; */
+    color: red;
+    font-weight: 800;
+}
+
+.crd-title a>svg {
+    vertical-align: middle;
+    font-size: 24px;
+}
+
+@media (max-width:700px) {
+    .card-cont {
+        gap: 10px;
+    }
+
+    .box {
+        width: 180px;
+        height: 280px;
+    }
+
+    .heads h2 {
+        font-size: 24px;
+    }
+
+    .crd-title a {
+        font-size: 10px;
+    }
+
+    .crd-title a>svg {
+        font-size: 20px;
+    }
+
+    .box:active img {
+        transform: scale(1.1);
+    }
+
+    .box:active h2 {
+        font-size: 28px;
+    }
+
+    .crd-title a:active {
+        color: red;
+        font-weight: 800;
+    }
+}
+
+/* ============%%%%%%% third page %%%%%%%%%%============ */
+.third-page {
+    /* position: relative; */
+    height: 100%;
+    width: 100vw;
+    z-index: 100;
+    background-color: black;
+}
+
+.thpg-bg {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(22, 22, 22, 0.608), rgba(22, 22, 22, 0.608)), url('./assets/tbhg2.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.tp-para {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: auto;
+    z-index: 190;
+}
+
+.tp-para p {
+    color: rgb(203, 203, 203);
+    text-align: left;
+}
+
+.thp-card {
+    position: relative;
+    height: 140vh;
+    width: 100vw;
+    border-top: 0px solid #000000;
+    box-shadow: 0px 20px 80px 50px #000000,
+        0px -20px 80px 50px #000000;
+    background-color: black;
+}
+
+.thp-bg-img {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 50%;
+}
+
+.thp-bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thp-cd-cont {
+    width: 900px;
+    height: 600px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.thp-cd-cont .thp-box {
+    width: 300px;
+    height: 350px;
+    border-radius: 4px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 3px 3px 12px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.thp-cd-cont .thp-box:nth-child(even) {
+    width: 380px;
+    height: 230px;
+}
+
+.thp-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thp-box:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(355deg);
+    z-index: 2;
+}
+
+.thp-box:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%) rotate(10deg);
+    z-index: 3;
+}
+
+.thp-box:nth-child(3) {
+    position: absolute;
+    top: 85%;
+    left: 72%;
+    transform: translate(-50%, -50%) rotate(5deg);
+    z-index: 1;
+}
+
+.thp-box:nth-child(4) {
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(350deg);
+    z-index: -1;
+}
+
+.thp-lnk {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.thp-lnk p {
+    color: rgb(225, 225, 225);
+    font-family: 'Poppins';
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.thp-lnk p>svg {
+    vertical-align: middle;
+    font-size: 38px;
+}
+
+.thp-lnk p:hover {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+
+@media (max-width:700px) {
+    .tp-para{
+        width: 300px;
+        font-size: 12px;
+    }
+    .thp-card {
+        height: 95vh;
+    }
+    .thp-bg-img {
+        width: 100vw;
+        top:40%;
+    }
+    .thp-cd-cont {
+        top:45%;
+    }
+    .thp-cd-cont .thp-box{
+        width: 150px;
+        height: 200px;
+    }
+    .thp-cd-cont .thp-box:nth-child(even) {
+        width: 220px;
+        height: 130px;
+    }
+    .thp-box:nth-child(1) {
+        top: 50%;
+        left: 40%;
+    }
+    .thp-box:nth-child(2) {
+        top: 50%;
+        left: 59%;
+    }
+    .thp-box:nth-child(3) {
+        top: 72%;
+        left: 60%;
+    }
+    
+    .thp-box:nth-child(4) {
+        top: 75%;
+        left: 42%;
+    }
+    .thp-lnk{
+        bottom: 10%;
+    }
+    .thp-lnk p{
+        font-size: 14px;
+    }
+    .thp-lnk p:active{
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-weight: 200;
+    }
+}
