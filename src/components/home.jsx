@@ -3,12 +3,9 @@ import './home.css'
 import mountain from './assets/mountain.png'
 import solo from './assets/solo2.jpg'
 import cycle from './assets/cycle.jpg'
-import nightsky from './assets/nightsky.jpg'
-import compass from './assets/compass.jpg'
 import tbh2 from './assets/tbhg2.jpg'
 import tbh3 from './assets/tbhg3.jpg'
 import rocksplash from './assets/rocksplash.png'
-import splash from './assets/splash2.png'
 import { IoLogoInstagram } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
@@ -17,7 +14,7 @@ import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { mycontext } from './context'
 
 function Home() {
-  const { desc, setdesc } = useContext(mycontext)
+  const { desc, setdesc, card, setcard, imgCard, setimgCard } = useContext(mycontext)
 
   const nameref = useRef(null)
   useEffect(() => {
@@ -58,46 +55,19 @@ function Home() {
       {/* =============== second section ============= */}
       <div className="second-cont">
         <div className="card-cont">
-          <div className="box">
-            <img src={solo} />
-            <div className="heads">
-              <h2>Adam</h2>
-            </div>
-            <div className="crd-title">
-              <a href='#'>view portfolio <MdOutlineArrowRightAlt /> </a>
-            </div>
-          </div>
-
-          <div className="box">
-            <img src={nightsky} />
-            <div className="heads">
-              <h2>Explore</h2>
-            </div>
-            <div className="crd-title">
-              <a href='#'>view Explores <MdOutlineArrowRightAlt /> </a>
-            </div>
-          </div>
-
-          <div className="box">
-            <img src={cycle} />
-            <div className="heads">
-              <h2>Adventures</h2>
-            </div>
-            <div className="crd-title">
-              <a href='#'>view Adventures <MdOutlineArrowRightAlt /> </a>
-            </div>
-          </div>
-
-          <div className="box">
-            <img src={compass} />
-            <div className="heads">
-              <h2>Travel</h2>
-            </div>
-            <div className="crd-title">
-              <a href='#'>view Traveling <MdOutlineArrowRightAlt /> </a>
-            </div>
-          </div>
-
+          {
+            card.map(cdata =>
+              <div className="box">
+                <img src={cdata.image} />
+                <div className="heads">
+                  <h2>{cdata.heading}</h2>
+                </div>
+                <div className="crd-title">
+                  <a href='#'>{cdata.title} <MdOutlineArrowRightAlt /> </a>
+                </div>
+              </div>
+            )
+          }
         </div>
       </div>
 
@@ -123,23 +93,17 @@ function Home() {
             <img src={rocksplash} />
           </div>
           <div className="thp-cd-cont">
-            <div className="thp-box">
-              <img src={solo} />
-            </div>
-            <div className="thp-box">
-              <img src={tbh2} />
-            </div>
-            <div className="thp-box">
-              <img src={cycle} />
-            </div>
-            <div className="thp-box">
-              <img src={tbh3} />
-            </div>
+            {
+              imgCard.map(imgcd =>
+                <div className="thp-box">
+                  <img src={imgcd.image} />
+                </div>
+              )
+            }
           </div>
-        
-        <div className="thp-lnk">
-          <p>View portfolio <MdOutlineArrowRightAlt /> </p>
-        </div>
+          <div className="thp-lnk">
+            <p>View portfolio <MdOutlineArrowRightAlt /> </p>
+          </div>
         </div>
 
 
