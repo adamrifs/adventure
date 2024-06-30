@@ -1,15 +1,13 @@
 import React, { useContext, useEffect, useRef } from 'react'
 import './home.css'
 import mountain from './assets/mountain.png'
-import solo from './assets/solo2.jpg'
-import cycle from './assets/cycle.jpg'
-import tbh2 from './assets/tbhg2.jpg'
-import tbh3 from './assets/tbhg3.jpg'
+import solo4 from './assets/solo4.jpg'
 import rocksplash from './assets/rocksplash.png'
 import { IoLogoInstagram } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { LiaCompass } from "react-icons/lia";
+import { LiaCopyright } from "react-icons/lia";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { mycontext } from './context'
 
@@ -106,6 +104,22 @@ function Home() {
           </div>
         </div>
 
+        <div className="ft-page">
+          <div className="ft-img">
+            <img src={solo4} />
+          </div>
+
+          <div className="ft-fade"></div>
+
+          <div className="ft-ctnts">
+            <h2>adamrifsal@gmail.com</h2>
+            <h4>Adam</h4>
+            <div className="ft-foot">
+           
+              <p><LiaCopyright /> 2024 Designed by Adam</p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
