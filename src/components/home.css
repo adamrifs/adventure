@@ -58,6 +58,7 @@ body::-webkit-scrollbar {
     transform: translateY(20%);
 }
 
+
 .mountain {
     width: 100vw;
     height: 100vh;
@@ -72,6 +73,7 @@ body::-webkit-scrollbar {
     z-index: 1;
     filter: brightness(0.9);
 }
+
 
 /* ================= aside starts here ============= */
 .aside {
